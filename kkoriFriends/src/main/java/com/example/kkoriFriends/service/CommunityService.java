@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class BoardService {
+public class CommunityService {
     private final ArticleRepository articleRepository;
 
     private final ModelMapper modelMapper;

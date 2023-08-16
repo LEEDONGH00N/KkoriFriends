@@ -40,11 +40,10 @@ public class Article extends BaseEntity {
     }
 
     @Builder
-    public Article(Long articlesId, String title, String content, Long viewed) {
-        this.articlesId = articlesId;
+    public Article( String title, String content, Long views) {
         this.title = title;
         this.content = content;
-        this.views = viewed;
+        this.views = views;
     }
 
 

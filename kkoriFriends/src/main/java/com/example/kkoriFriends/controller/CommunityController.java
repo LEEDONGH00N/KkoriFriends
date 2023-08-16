@@ -1,7 +1,7 @@
 package com.example.kkoriFriends.controller;
 
 
-import com.example.kkoriFriends.service.BoardService;
+import com.example.kkoriFriends.service.CommunityService;
 import com.example.kkoriFriends.config.BaseResponse;
 import com.example.kkoriFriends.entity.Article;
 import com.example.kkoriFriends.model.ArticleBriefDTO;
@@ -19,9 +19,9 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/community")
-public class BoardController {
+public class CommunityController {
 
-    private final BoardService boardService;
+    private final CommunityService boardService;
 
     /*게시글 생성*/
     @PostMapping("/post")
@@ -75,6 +75,7 @@ public class BoardController {
                 .status(HttpStatus.OK)
                 .body(BaseResponse.builder().result(foodArticles).build());
     }
+
 
     @GetMapping("/health/article")
     public ResponseEntity<?> showHealthPostById(@RequestParam("id") Long id)
