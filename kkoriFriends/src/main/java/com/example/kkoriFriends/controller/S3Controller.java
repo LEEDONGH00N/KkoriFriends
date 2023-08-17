@@ -24,5 +24,4 @@ public class S3Controller {
         return this.s3Service.upload(multipartFile,"upload");
     }
 
-
 }

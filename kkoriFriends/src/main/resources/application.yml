@@ -1,9 +1,25 @@
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url : jdbc:mysql://127.0.0.1:3306/TailFriend
+#    username: tailfriendManager
+#    password: Dlehdgns0126!
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: false
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL8Dialect
+#
+
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url : jdbc:mysql://127.0.0.1:3306/TailFriend
-    username:
-    password:
+    url : jdbc:mysql://db-i202p.pub-cdb.ntruss.com:3306/kkorifriend?characterEncoding=utf8
+    username: kkorifriend
+    password: kkorifriend123!
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,33 +33,19 @@ spring:
       max-request-size: 20MB
       max-file-size: 10MB
 
-#spring:
-#  datasource:
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url : jdbc:mysql://db-i202p.pub-cdb.ntruss.com:3306/kkorifriend?characterEncoding=utf8
-#    username:
-#    password:
-#  jpa:
-#    hibernate:
-#      ddl-auto: update
-#    show-sql: false
-#    properties:
-#      hibernate:
-#        dialect: org.hibernate.dialect.MySQL8Dialect
-#
-#server:
-#  port: 1024
+server:
+  port: 1024
 
-#
-#cloud:
-#  aws:
-#    credentials:
-#      access-key:
-#      secret-key:
-#    stack:
-#      auto: false
-#    region:
-#      static: ap-northeast-2
-#    s3:
-#      endpoint: https://kr.object.ncloudstorage.com
-#      bucket: kkorifriendimage
+
+cloud:
+  aws:
+    credentials:
+      access-key: 7zBl90sN0wY550iFoCr2
+      secret-key: 8LnOyADkIZcEfHK8g94nRM8c5Hgyad2vVyQZDSNr
+    stack:
+      auto: false
+    region:
+      static: ap-northeast-2
+    s3:
+      endpoint: https://kr.object.ncloudstorage.com
+      bucket: kkorifriendimage
