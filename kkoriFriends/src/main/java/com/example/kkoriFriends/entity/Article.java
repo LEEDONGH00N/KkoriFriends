@@ -5,11 +5,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
 @Entity
-@Table(name="articles")
+@Table(name="article")
 public class Article extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,6 +36,8 @@ public class Article extends BaseEntity {
     @Column(name = "likes")
     private Long likes = 0L;
 
+    @OneToMany(mappedBy="article", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Image> image = new ArrayList<Image>();
 
 
     public Article() {

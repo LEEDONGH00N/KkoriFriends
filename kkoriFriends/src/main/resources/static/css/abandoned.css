@@ -1,0 +1,20 @@
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.info {
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.info img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}

@@ -2,7 +2,7 @@ package com.example.kkoriFriends.service;
 
 
 import com.example.kkoriFriends.entity.Abandoned;
-import com.example.kkoriFriends.model.AbandonedDTO;
+import com.example.kkoriFriends.model.abandonedDTO.AbandonedDTO;
 import com.example.kkoriFriends.repository.AbandonedInfoRepository;
 import com.google.gson.*;
 import lombok.RequiredArgsConstructor;

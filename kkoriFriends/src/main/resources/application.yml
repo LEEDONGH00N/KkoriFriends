@@ -11,8 +11,20 @@
 #    properties:
 #      hibernate:
 #        dialect: org.hibernate.dialect.MySQL8Dialect
-#
+#  thymeleaf:
+#    enabled: true
+#    cache: false
+#    prefix: classpath:/templates/
+#    suffix: .html
+#    encoding: UTF-8
+#    mode: HTML
+#    servlet:
+#      content-type: text/html
 
+#logging:
+#  level:
+#    org:
+#      thymeleaf: TRACE # Thymeleaf 로깅 레벨 설정
 
 spring:
   datasource:
@@ -27,6 +39,15 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+  thymeleaf:
+    enabled: true
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML
+    servlet:
+      content-type: text/html
 
   servlet:
     multipart:

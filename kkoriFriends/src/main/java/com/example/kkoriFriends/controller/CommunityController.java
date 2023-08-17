@@ -4,24 +4,30 @@ package com.example.kkoriFriends.controller;
 import com.example.kkoriFriends.service.CommunityService;
 import com.example.kkoriFriends.config.BaseResponse;
 import com.example.kkoriFriends.entity.Article;
-import com.example.kkoriFriends.model.ArticleBriefDTO;
-import com.example.kkoriFriends.model.ArticleDTO;
-import com.example.kkoriFriends.model.ArticleWriteDTO;
+import com.example.kkoriFriends.model.articleDTO.ArticleBriefDTO;
+import com.example.kkoriFriends.model.articleDTO.ArticleDTO;
+import com.example.kkoriFriends.model.articleDTO.ArticleWriteDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequiredArgsConstructor
-@RequestMapping("/community")
+@RequestMapping("/KkoriFriends/community")
 public class CommunityController {
 
     private final CommunityService boardService;
+
+    @GetMapping("")
+    public String showCommunity() {
+        return "커뮤니티";
+    }
 
     /*게시글 생성*/
     @PostMapping("/post")
@@ -38,7 +44,7 @@ public class CommunityController {
     @GetMapping("/recommend")
     public ResponseEntity<?> showRecommendArticles()
     {
-        PageRequest pageRequest = PageRequest.of(0, 4, Sort.by(Sort.Direction.DESC, "views"));
+        PageRequest pageRequest = PageRequest.of(0, 8, Sort.by(Sort.Direction.DESC, "views"));
 
         List<ArticleDTO> articles = this.boardService.showTopArticles(pageRequest);
         return ResponseEntity
