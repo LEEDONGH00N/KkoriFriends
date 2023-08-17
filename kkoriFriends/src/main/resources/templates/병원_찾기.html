@@ -58,16 +58,16 @@
               <div class="d-flex mr-auto flex-column flex-lg-row align-items-center">
                 <ul class="navbar-nav  ">
                   <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/KkoriFriends/disease/">증상별 질병찾기</a>
+                    <a class="nav-link" th:href="@{/KkoriFriends/disease}">증상별 질병찾기</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/KkoriFriends/hospital/"> 병원 찾기</a>
+                    <a class="nav-link" th:href="@{/KkoriFriends/hospital}"> 병원 찾기</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/KkoriFriends/abandoned/">유기동물 찾기</a>
+                    <a class="nav-link" th:href="@{/KkoriFriends/abandoned/1}">유기동물 찾기</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/KkoriFriends/community/">커뮤니티</a>
+                    <a class="nav-link" th:href="@{/KkoriFriends/community}">커뮤니티</a>
                   </li>
                 </ul>
               </div>
@@ -122,10 +122,10 @@
       <img th:src="@{/images/로고-하얀색.png}" alt="">
     </div>
     <div class="footer-link">
-      <a href="http://localhost:8080/KkoriFriends/disease/"> 증상별 질병찾기</a>
-      <a href="http://localhost:8080/KkoriFriends/hospital/">병원찾기</a>
-      <a href="http://localhost:8080/KkoriFriends/abandoned/">유기동물 찾기</a>
-      <a href="http://localhost:8080/KkoriFriends/community/">커뮤니티</a>
+      <a th:href="@{/KkoriFriends/disease}"> 증상별 질병찾기</a>
+      <a th:href="@{/KkoriFriends/hospital}">병원찾기</a>
+      <a th:href="@{/KkoriFriends/abandoned/1}">유기동물 찾기</a>
+      <a th:href="@{/KkoriFriends/community}">커뮤니티</a>
     </div>
 
 
@@ -137,7 +137,7 @@
     <br>
 
     <p>멋쟁이사자처럼 세종대학교 11기 꼬리친구</p>
-  </footer>기
+  </footer>
   <!-- footer section -->
 
   <!-- jQery -->
