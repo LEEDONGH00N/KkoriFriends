@@ -53,7 +53,7 @@ spring:
     multipart:
       max-request-size: 20MB
       max-file-size: 10MB
-
+#
 server:
   port: 1024
 

@@ -33,6 +33,7 @@ public class CommunityController {
     @PostMapping("/post")
     public ResponseEntity<?> createPost(@RequestBody ArticleWriteDTO articleWriteDTO)
     {
+
         ArticleWriteDTO dto = this.boardService.createPost(articleWriteDTO);
         return ResponseEntity
                 .status(HttpStatus.OK)
@@ -63,8 +64,8 @@ public class CommunityController {
                 .body(BaseResponse.builder().result(foodArticles).build());
      }
 
-    @GetMapping("/food/article")
-    public ResponseEntity<?> showFoodPostById(@RequestParam("id") Long id)
+    @GetMapping("/food/article/{id}")
+    public ResponseEntity<?> showFoodPostById(@PathVariable Long id)
     {
         Article article = this.boardService.showArticleById(id);
         return ResponseEntity
@@ -83,8 +84,8 @@ public class CommunityController {
     }
 
 
-    @GetMapping("/health/article")
-    public ResponseEntity<?> showHealthPostById(@RequestParam("id") Long id)
+    @GetMapping("/health/article/{id}")
+    public ResponseEntity<?> showHealthPostById(@PathVariable Long id)
     {
         Article article = this.boardService.showArticleById(id);
         return ResponseEntity
