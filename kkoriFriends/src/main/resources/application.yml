@@ -1,38 +1,9 @@
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url : jdbc:mysql://127.0.0.1:3306/TailFriend
-    username: tailfriendManager
-    password: Dlehdgns0126!
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: false
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
-  thymeleaf:
-    enabled: true
-    cache: off
-
-    prefix: classpath:templates/
-    suffix: .html
-    check-template-location: true
-    encoding: UTF-8
-    mode: HTML
-    servlet:
-      content-type: text/html
-logging:
-  level:
-    org:
-      thymeleaf: TRACE # Thymeleaf 로깅 레벨 설정
-
 #spring:
 #  datasource:
 #    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url : jdbc:mysql://db-i202p.pub-cdb.ntruss.com:3306/kkorifriend?characterEncoding=utf8
-#    username: kkorifriend
-#    password: kkorifriend123!
+#    url : jdbc:mysql://127.0.0.1:3306/TailFriend
+#    username: tailfriendManager
+#    password: Dlehdgns0126!
 #  jpa:
 #    hibernate:
 #      ddl-auto: update
@@ -42,14 +13,44 @@ logging:
 #        dialect: org.hibernate.dialect.MySQL8Dialect
 #  thymeleaf:
 #    enabled: true
-#    cache: false
-#    prefix: classpath:/templates/
+#    cache: off
+#
+#    prefix: classpath:templates/
 #    suffix: .html
+#    check-template-location: true
 #    encoding: UTF-8
 #    mode: HTML
 #    servlet:
 #      content-type: text/html
-#
+#logging:
+#  level:
+#    org:
+#      thymeleaf: TRACE # Thymeleaf 로깅 레벨 설정
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url : jdbc:mysql://db-i202p.pub-cdb.ntruss.com:3306/kkorifriend?characterEncoding=utf8
+    username: kkorifriend
+    password: kkorifriend123!
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  thymeleaf:
+    enabled: true
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    check-template-location: true
+    encoding: UTF-8
+    mode: HTML
+    servlet:
+      content-type: text/html
+
   servlet:
     multipart:
       max-request-size: 20MB
@@ -57,9 +58,9 @@ logging:
   web:
     resources:
       static-locations: classpath:static/
-#
-#server:
-#  port: 1024
+
+server:
+  port: 1024
 
 
 cloud:
