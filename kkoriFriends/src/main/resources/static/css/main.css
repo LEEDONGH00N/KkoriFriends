@@ -3,7 +3,7 @@
 }
 body {
   font-size: 14px;
-  background-color: #FFE6A7;
+  background-color: #fff;
 }
 
 
@@ -80,7 +80,7 @@ body {
 .v93_268 {
   width: 274px;
   height: 101px;
-  background: url("resources/templates/images/v93_268.png");
+  background: url("../images/v93_268.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -106,7 +106,7 @@ body {
 .v93_270 {
   width: 114px;
   height: 114px;
-  background: url("resources/templates/images/v93_270.png");
+  background: url("../images/v93_270.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -156,7 +156,7 @@ body {
 .v93_276 {
   width: 114px;
   height: 114px;
-  background: url("resources/templates/images/v93_276.png");
+  background: url("../images/v93_276.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -204,7 +204,7 @@ body {
 .v93_281 {
   width: 114px;
   height: 114px;
-  background: url("resources/templates/images/v93_281.png");
+  background: url("../images/v93_281.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -252,7 +252,7 @@ body {
 .v93_289 {
   width: 113px;
   height: 114px;
-  background: url("resources/templates/images/v93_289.png");
+  background: url("../images/v93_289.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -319,7 +319,7 @@ body {
 
 
 .v93_326 {
-  width: 250px;
+  width: 1000px;
   color: rgba(0,0,0,1);
   position: absolute;
   top: 594px;
@@ -422,7 +422,7 @@ body {
 .v219_302 {
   width: 274px;
   height: 101px;
-  background: url("resources/templates/images/v219_302.png");
+  background: url("../images/v219_302.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -447,7 +447,7 @@ body {
 .v219_304 {
   width: 114px;
   height: 114px;
-  background: url("resources/templates/images/v219_304.png");
+  background: url("../images/v219_304.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -503,7 +503,7 @@ body {
 .v219_310 {
   width: 114px;
   height: 114px;
-  background: url("resources/templates/images/v219_310.png");
+  background: url("../images/v219_310.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -560,7 +560,7 @@ body {
 .v219_315 {
   width: 114px;
   height: 114px;
-  background: url("resources/templates/images/v219_315.png");
+  background: url("../images/v219_315.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1001,7 +1001,7 @@ body {
 .v221_310 {
   width: 100px;
   height: 100px;
-  background: url("resources/templates/images/v221_310.png");
+  background: url("../images/v221_310.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

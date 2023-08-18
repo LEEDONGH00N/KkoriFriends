@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <!-- Basic -->
@@ -35,22 +35,7 @@
   <link th:href="@{/css/responsive.css}" rel="stylesheet" />
 
   <link rel="stylesheet" type="text/css" th:href="@{/css/abandoned.css}" />
-  <style>
-    #wrapper {
-      display: grid;
-      grid-template-columns: 200px 200px 200px;
-      grid-template-rows: 100px 200px;
-      margin: 30px;
-    }
 
-    .items:nth-child(2n+1) {
-      background-color: #bbb;
-    }
-
-    .items:nth-child(2n) {
-      background-color: #eee;
-    }
-  </style>
 </head>
 
 <body class="sub_page">
@@ -99,19 +84,20 @@
     <div class="grid-container">
       <div th:each="abandoned : ${abandonedList}" class="grid-item">
         <div class="info">
-          <p th:text="${abandoned.ABDM_IDNTFY_NO}"></p>
-          <p th:text="${abandoned.SPECIES_NM}"></p>
-          <p th:text="${abandoned.COLOR_NM}"></p>
-          <p th:text="${abandoned.AGE_INFO}"></p>
-          <p th:text="${abandoned.BDWGH_INFO}"></p>
           <p><img th:src="${abandoned.THUMB_IMAGE_COURS}" alt="Image"></p>
-          <p th:text="${abandoned.SEX_NM}"></p>
-          <p th:text="${abandoned.NEUT_YN}"></p>
-          <p th:text="${abandoned.SFETR_INFO}"></p>
-          <p th:text="${abandoned.SHTER_NM}"></p>
+          <p class="data-label"><span>식별 번호:</span><span th:text="${abandoned.ABDM_IDNTFY_NO}"></span></p>
+          <p class="data-label"><span>종:</span><span th:text="${abandoned.SPECIES_NM}"></span></p>
+          <p class="data-label"><span>색상:</span><span th:text="${abandoned.COLOR_NM}"></span></p>
+          <p class="data-label"><span>나이:</span><span th:text="${abandoned.AGE_INFO}"></span></p>
+          <p class="data-label"><span>체중:</span><span th:text="${abandoned.BDWGH_INFO}"></span></p>
+          <p class="data-label"><span>성별:</span><span th:text="${abandoned.SEX_NM}"></span></p>
+          <p class="data-label"><span>중성화:</span><span th:text="${abandoned.NEUT_YN}"></span></p>
+          <p class="data-label"><span>특징:</span><span th:text="${abandoned.SFETR_INFO}"></span></p>
+          <p class="data-label"><span>보호소:</span><span th:text="${abandoned.SHTER_NM}"></span></p>
         </div>
       </div>
     </div>
+
 
   </section>
 
