@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
   <!-- Basic -->
@@ -35,7 +35,22 @@
   <link th:href="@{/css/responsive.css}" rel="stylesheet" />
 
   <link rel="stylesheet" type="text/css" th:href="@{/css/abandoned.css}" />
+  <style>
+    #wrapper {
+      display: grid;
+      grid-template-columns: 200px 200px 200px;
+      grid-template-rows: 100px 200px;
+      margin: 30px;
+    }
 
+    .items:nth-child(2n+1) {
+      background-color: #bbb;
+    }
+
+    .items:nth-child(2n) {
+      background-color: #eee;
+    }
+  </style>
 </head>
 
 <body class="sub_page">
@@ -77,27 +92,28 @@
         </div>
       </div>
     </header>
-    </header>
       <!-- end header section -->
   </div>
   <section class="유기동물_찾기">
     <h1>유기동물 찾기</h1>
-    <div th:each="abandoned : ${abandonedList}" class="info-container">
-      <div class="info">
-        <p th:text="${abandoned.ABDM_IDNTFY_NO}"></p>
-        <p th:text="${abandoned.SPECIES_NM}"></p>
-        <p th:text="${abandoned.COLOR_NM}"></p>
-        <p th:text="${abandoned.AGE_INFO}"></p>
-        <p th:text="${abandoned.BDWGH_INFO}"></p>
-        <p><img th:src="${abandoned.THUMB_IMAGE_COURS}" alt="Image"></p>
-        <p th:text="${abandoned.SEX_NM}"></p>
-        <p th:text="${abandoned.NEUT_YN}"></p>
-        <p th:text="${abandoned.SFETR_INFO}"></p>
-        <p th:text="${abandoned.SHTER_NM}"></p>
+    <div class="grid-container">
+      <div th:each="abandoned : ${abandonedList}" class="grid-item">
+        <div class="info">
+          <p th:text="${abandoned.ABDM_IDNTFY_NO}"></p>
+          <p th:text="${abandoned.SPECIES_NM}"></p>
+          <p th:text="${abandoned.COLOR_NM}"></p>
+          <p th:text="${abandoned.AGE_INFO}"></p>
+          <p th:text="${abandoned.BDWGH_INFO}"></p>
+          <p><img th:src="${abandoned.THUMB_IMAGE_COURS}" alt="Image"></p>
+          <p th:text="${abandoned.SEX_NM}"></p>
+          <p th:text="${abandoned.NEUT_YN}"></p>
+          <p th:text="${abandoned.SFETR_INFO}"></p>
+          <p th:text="${abandoned.SHTER_NM}"></p>
+        </div>
       </div>
     </div>
-  </section>
 
+  </section>
 
   <!-- footer section -->
   <footer class="footer_section">
@@ -110,7 +126,6 @@
       <a th:href="@{/KkoriFriends/abandoned/1}">유기동물 찾기</a>
       <a th:href="@{/KkoriFriends/community}">커뮤니티</a>
     </div>
-
 
     <div class="foo">
       <img th:src="@{/images/footer.png}" alt="">

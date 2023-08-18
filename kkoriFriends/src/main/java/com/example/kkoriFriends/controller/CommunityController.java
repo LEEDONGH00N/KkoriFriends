@@ -26,7 +26,7 @@ public class CommunityController {
 
     @GetMapping("")
     public String showCommunity() {
-        return "커뮤니티";
+        return "community";
     }
 
     /*게시글 생성*/
