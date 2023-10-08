@@ -29,8 +29,8 @@ public class AbandonedController {
 
         String baseUrl = "https://openapi.gg.go.kr";
         String service = "AbdmAnimalProtect";
-        String apiKey = "5371c22525364e3692b8f1be32981c2c"; //localhost용
-        //69d997be66bd4e3cbe4cf0658a4d9b76 : url용
+        String apiKey = ""; //localhost용
+        // : url용
         String fileType = "json";
         String apiUrl = String.format("%s/%s?KEY=%s&TYPE=%s&pIndex=%s&pSize=%s",
                 baseUrl, service, apiKey, fileType, index, 9);
