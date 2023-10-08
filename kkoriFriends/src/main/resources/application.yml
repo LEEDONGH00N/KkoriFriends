@@ -2,8 +2,8 @@
 #  datasource:
 #    driver-class-name: com.mysql.cj.jdbc.Driver
 #    url : jdbc:mysql://127.0.0.1:3306/TailFriend
-#    username: tailfriendManager
-#    password: Dlehdgns0126!
+#    username:
+#    password:
 #  jpa:
 #    hibernate:
 #      ddl-auto: update
@@ -31,8 +31,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url : jdbc:mysql://db-i202p.pub-cdb.ntruss.com:3306/kkorifriend?characterEncoding=utf8
-    username: kkorifriend
-    password: kkorifriend123!
+    username:
+    password:
   jpa:
     hibernate:
       ddl-auto: update
